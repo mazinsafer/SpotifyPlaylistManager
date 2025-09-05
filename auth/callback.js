@@ -3,14 +3,14 @@ const code = params.get('code');
 const state = params.get('state');
 const error = params.get('error');
 
-// Your extension ID - replace with your actual extension ID
-const EXTENSION_ID = 'gcgcnhnpmedbjfboepbiflofebklifhm';
+
+const EXTENSION_ID = 'nice try';
 
 if (error) {
   document.querySelector('h2').textContent = 'Authentication failed';
   document.querySelector('p').textContent = error;
 } else if (code && state) {
-  // Send the authorization code to the extension
+
   chrome.runtime.sendMessage(
     EXTENSION_ID,
     {
