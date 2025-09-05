@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Spotify Playlist Manager",
+  "version": "1.0.0",
+  "description": "Manage your Spotify playlists with advanced features",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.spotify.com/*",
+    "https://accounts.spotify.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "options_page": "src/options/index.html",
+  "externally_connectable": {
+    "matches": [
+      "https://*.github.io/*"
+    ]
+  }
+}
