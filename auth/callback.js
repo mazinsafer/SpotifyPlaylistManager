@@ -4,7 +4,7 @@ const state = params.get('state');
 const error = params.get('error');
 
 
-const EXTENSION_ID = 'nice try';
+const EXTENSION_ID = 'replace';
 
 if (error) {
   document.querySelector('h2').textContent = 'Authentication failed';
